@@ -2,4 +2,3 @@
 
 npx lint-staged
 pnpm run type-check
-pnpm run db:generate
