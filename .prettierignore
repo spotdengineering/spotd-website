@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+
+# Database
+migrations/
+
+# Environment files
+.env*
+!.env.example
+
+# Logs
+*.log
+
+# Package files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Generated files
+*.min.js
+*.min.css
+
+# Other
+.DS_Store
+*.tsbuildinfo 
