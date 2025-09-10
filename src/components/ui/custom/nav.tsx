@@ -9,9 +9,9 @@ export const Nav = ({ className }: { className: string }) => {
         className
       )}
     >
-      <span>How Spot’d works</span>
+      <span>How Spot&apos;d works</span>
       <span>Contact Us</span>
-      <span>FAQ's</span>
+      <span>FAQ&apos;s</span>
     </nav>
   );
 };

@@ -21,8 +21,8 @@ const Game_Changer = () => {
           </span>
         </h1>
         <Paragraph>
-          From discovery to delivery, Spot’d ensures <br /> clarity, security,
-          and results and here’s how"
+          From discovery to delivery, Spot&apos;d ensures <br /> clarity,
+          security, and results and heres how
         </Paragraph>
       </div>
 
@@ -53,7 +53,7 @@ const Game_Changer = () => {
         />
         <Game_Image
           src="/img3.png"
-          imgStyle="object-cover max-fold:w-screen max-fold:h-150 sm:h-full "
+          imgStyle={'object-cover max-fold:w-screen max-fold:h-150 sm:h-full'}
         >
           <Person_Card
             img="/mini_creator.png"
