@@ -48,7 +48,7 @@ const Contact = () => {
             />
             <CustomTextarea
               placeholder="Message"
-              className="!text-base rounded-xl pl-4 max-h-[400px] resize-none  bg-white"
+              className="!text-base rounded-xl pl-4 h-[150px] resize-none  bg-white"
             />
 
             <CustomButton

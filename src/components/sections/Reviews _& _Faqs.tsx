@@ -89,15 +89,13 @@ const ReviewsAndFaqs = () => {
         <div className="flex w-full flex-col lg:flex-row items-stretch mt-8 sm:mt-16">
           {/* Carousel */}
           <div
-            className="overflow-hidden md:max-w-[100%] lg:max-w-[70%] xl:max-w-[75%] 2xl:max-w-[80%]"
+            className="relative overflow-hidden md:max-w-[100%] lg:max-w-[70%] xl:max-w-[75%] 2xl:max-w-[80%]"
             ref={emblaRef}
           >
+            {/* slides */}
             <div className="flex">
               {testimonies.map((t, index: number) => (
-                <div
-                  className="flex-[0_0_100%]" // makes each slide full width
-                  key={index}
-                >
+                <div className="flex-[0_0_100%]" key={index}>
                   <div className="flex items-stretch py-6 ">
                     {/* reviewer image */}
                     <div className="w-[25%] overflow-hidden rounded-3xl hidden md:flex ">
@@ -109,13 +107,13 @@ const ReviewsAndFaqs = () => {
                     </div>
 
                     {/* review */}
-                    <div className="w-full md:w-[75%] flex flex-col gap-6 md:gap-0 justify-between md:px-5 xl:px-10">
+                    <div className="w-full md:w-[75%] flex flex-col md:gap-0 md:px-5 xl:px-10">
                       <p className="base:text-2xl sm:text-3xl text-black/80 w-full text-center md:text-start xl:max-w-[600px]">
                         {t?.note}
                       </p>
 
                       {/* reviewer name, role, avi */}
-                      <div className="flex items-center gap-3 w-fit mx-auto md:w-full">
+                      <div className="flex items-center gap-3 w-fit mx-auto md:w-full mt-5 md:mt-10">
                         <img
                           src={t?.img}
                           alt="avi"
@@ -130,28 +128,26 @@ const ReviewsAndFaqs = () => {
                           </p>
                         </div>
                       </div>
-
-                      {/* buttons */}
-                      <div className="flex gap-4 mx-auto md:ml-auto md:mx-0">
-                        {/* left */}
-                        <button
-                          onClick={scrollPrev}
-                          className="border-2 border-black rounded-full h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
-                        >
-                          <SlArrowLeft className="text-xl sm:text-2xl" />
-                        </button>
-                        {/* right */}
-                        <button
-                          onClick={scrollNext}
-                          className="border-2 border-black rounded-full h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
-                        >
-                          <SlArrowRight className="text-xl sm:text-2xl" />
-                        </button>
-                      </div>
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* static buttons */}
+            <div className="mx-auto w-fit mb-10 md:mb-0 md:mx-0 md:w-fit md:absolute gap-4 md:bottom-10 md:right-10 flex items-center">
+              <button
+                onClick={scrollPrev}
+                className="border-2 border-black rounded-full h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
+              >
+                <SlArrowLeft className="text-xl sm:text-2xl" />
+              </button>
+              <button
+                onClick={scrollNext}
+                className="border-2 border-black rounded-full h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
+              >
+                <SlArrowRight className="text-xl sm:text-2xl" />
+              </button>
             </div>
           </div>
 
