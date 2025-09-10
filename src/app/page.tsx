@@ -1,3 +1,6 @@
+import Contact from '@/components/sections/Contact';
+import Footer from '@/components/sections/Footer';
+import ReviewsAndFaqs from '@/components/sections/Reviews _& _Faqs';
 import About_Spotd from '@/components/containers/about-spotd';
 import Game_Changer from '@/components/containers/game-changer';
 import { Hero_Section } from '@/components/containers/hero-section';
@@ -8,6 +11,9 @@ export default function Home() {
       <Hero_Section />
       <About_Spotd />
       <Game_Changer />
+      <ReviewsAndFaqs />
+      <Contact />
+      <Footer />
     </main>
   );
 }
