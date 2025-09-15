@@ -45,6 +45,7 @@ body {
   @apply font-plus_jakarta_sans;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 /* HIDE SCROLL */

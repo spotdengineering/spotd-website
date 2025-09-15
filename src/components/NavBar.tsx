@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import CustomButton from './custom-comp/CustomButton';
 import { motion, AnimatePresence } from 'framer-motion';
-import { RiMenu4Fill } from 'react-icons/ri';
 import CustomButtonOutline from './custom-comp/CustomButtonOutline';
 import LogoColored from './custom-comp/LogoColored';
 const NavBar = () => {
@@ -14,9 +13,9 @@ const NavBar = () => {
   };
 
   const navs = [
-    { name: "How Spot'd works", link: '/' },
-    { name: 'Contact Us', link: '/' },
-    { name: 'FAQs', link: '/' },
+    { name: 'Why Us', link: '#whyus' },
+    { name: 'Contact Us', link: '#contact' },
+    { name: 'FAQs', link: '#faq' },
   ];
   return (
     <motion.header

@@ -12,10 +12,9 @@ import LogoBlack from './custom-comp/LogoBlack';
 
 const Footer = () => {
   const navs = [
-    { name: 'How Spot’d works', link: '/' },
-    { name: 'Features', link: '/' },
-    { name: 'Contact us', link: '/' },
-    { name: 'FAQ’s', link: '/' },
+    { name: 'Why Us', link: '#whyus' },
+    { name: 'Contact Us', link: '#contact' },
+    { name: 'FAQs', link: '#faq' },
   ];
 
   const social = [
@@ -50,12 +49,14 @@ const Footer = () => {
           {/* navs */}
           <div className="flex flex-col sm:flex-wrap sm:flex-row gap-4 sm:gap-8 sm:items-center font-semibold">
             {navs?.map((n: any, index: number) => (
-              <p
-                key={index}
-                className="text-black cursor-pointer hover:text-black/60 transition-all ease-in-out duration-300"
-              >
-                {n?.name}
-              </p>
+              <Link href={n?.link} key={index}>
+                <p
+                  key={index}
+                  className="text-black cursor-pointer hover:text-black/60 transition-all ease-in-out duration-300"
+                >
+                  {n?.name}
+                </p>
+              </Link>
             ))}
           </div>
 

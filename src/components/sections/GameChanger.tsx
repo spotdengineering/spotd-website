@@ -11,8 +11,11 @@ import {
 
 const Game_Changer = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-10 2xl:px-0">
-      <section className="flex pb-10 font-plusjakarta items-center flex-col gap-10 size-full max-w-[1440px] mx-auto relative ">
+    <div
+      className="px-4 sm:px-6 lg:px-10 2xl:px-0 scroll-mt-[100px] lg:scroll-mt-[140px]"
+      id="whyus"
+    >
+      <div className="flex items-center flex-col gap-10 size-full max-w-[1440px] mx-auto relative ">
         <div className="flex flex-col gap-4 sm:gap-6 items-center">
           <div>
             <p className="text-black text-[35px] sm:text-[50px] text-center w-fit mx-auto font-medium">
@@ -126,7 +129,7 @@ const Game_Changer = () => {
             text="The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent."
           />
         </Game_Card>
-      </section>
+      </div>
     </div>
   );
 };
