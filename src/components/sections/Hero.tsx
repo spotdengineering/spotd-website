@@ -3,6 +3,7 @@ import { Card_Global } from '../ui/custom/cards/card-global';
 import { Glass_Card } from '../ui/custom/cards/glass-card';
 import CustomButton from '../custom-comp/CustomButton';
 import CustomButtonOutline from '../custom-comp/CustomButtonOutline';
+
 export const Hero = () => {
   return (
     <>

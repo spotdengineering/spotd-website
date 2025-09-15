@@ -4,7 +4,10 @@ import CustomTextarea from '../custom-comp/CustomTextarea';
 import CustomButton from '../custom-comp/CustomButton';
 const Contact = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-10 2xl:px-0 relative">
+    <div
+      className="px-4 sm:px-6 lg:px-10 2xl:px-0 relative scroll-mt-[100px] lg:scroll-mt-[140px]"
+      id="contact"
+    >
       <div className="max-w-[1440px] mx-auto">
         <div className="relative pt-12 sm:pt-20">
           <p className=" text-center text-6xl sm:text-8xl md:text-9xl font-bold bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon">

@@ -179,7 +179,10 @@ const ReviewsAndFaqs = () => {
         </div>
 
         {/* --------------------------- FAQs ------------------------------------- */}
-        <div className="mt-20 flex flex-col space-y-8 lg:space-y-0 lg:flex-row justify-between items-center">
+        <div
+          className="mt-20 flex flex-col space-y-8 lg:space-y-0 lg:flex-row justify-between items-center scroll-mt-[100px] lg:scroll-mt-[140px]"
+          id="faq"
+        >
           <div>
             <p className="text-black text-[35px] sm:text-[40px] mx-auto text-center lg:mx-0 lg:text-start w-fit font-medium">
               Got Questions?

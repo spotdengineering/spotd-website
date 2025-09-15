@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className=""
         // {`${inter.variable} ${plusJakartaSans.variable} font-plusJakartaSans flex flex-col items-center justify-center relative size-full overflow-x-hidden antialiased`}
