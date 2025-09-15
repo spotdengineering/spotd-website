@@ -5,7 +5,7 @@ import CustomButton from '../custom-comp/CustomButton';
 const Contact = () => {
   return (
     <div className="px-4 sm:px-6 lg:px-10 2xl:px-0 relative">
-      <div className="my-20 max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto">
         <div className="relative pt-12 sm:pt-20">
           <p className=" text-center text-6xl sm:text-8xl md:text-9xl font-bold bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon">
             Contact Us
@@ -18,7 +18,7 @@ const Contact = () => {
               alt="phone"
             />
           </div>
-          <p className="text-black text-base sm:text-lg text-center max-w-xl w-fit mx-auto mt-6 sm:mt-16 md:mt-8">
+          <p className="text-black text-lg lg:text-2xl text-center max-w-xl w-fit mx-auto mt-6 sm:mt-16 md:mt-8">
             We’re just a message away, ready to answer your questions, explore
             ideas, and help you connect seamlessly on Spot’d
           </p>
@@ -53,7 +53,7 @@ const Contact = () => {
 
             <CustomButton
               name="Send Message"
-              className="bg-gradient-to-r from-brandLemon via-brandOrange to-brandPink rounded-full text-white w-fit py-6 px-9 mx-auto cursor-pointer"
+              className="bg-gradient-to-r mx-auto"
             />
           </div>
         </div>

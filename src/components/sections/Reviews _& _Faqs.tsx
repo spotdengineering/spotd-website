@@ -74,15 +74,15 @@ const ReviewsAndFaqs = () => {
 
   return (
     <div className="px-4 sm:px-6 lg:px-10 2xl:px-0">
-      <div className="max-w-[1440px] mx-auto py-6">
+      <div className="max-w-[1440px] mx-auto">
         {/* ------------------------------reviews -------------------------------- */}
-        <p className="text-black text-3xl sm:text-[40px] text-center w-fit mx-auto font-medium">
+        <p className="text-black text-[35px] sm:text-[50px] text-center w-fit mx-auto font-medium">
           Results that Speak
         </p>
-        <p className="text-3xl sm:text-[40px] text-center w-fit mx-auto font-medium italic bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon sm:mt-1">
+        <p className="text-[35px] sm:text-[50px] text-center w-fit mx-auto font-medium italic bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon mt-[-8px]">
           Louder Than Words
         </p>
-        <p className="text-black text-center max-w-sm w-fit mx-auto mt-2 text-lg">
+        <p className="text-black text-center max-w-md w-fit mx-auto mt-2 text-xl">
           From discovery to delivery, Spot’d ensures clarity, security, and
           results.
         </p>
@@ -108,7 +108,7 @@ const ReviewsAndFaqs = () => {
 
                     {/* review */}
                     <div className="w-full md:w-[75%] flex flex-col md:gap-0 md:px-5 xl:px-10">
-                      <p className="base:text-2xl sm:text-3xl text-black/80 w-full text-center md:text-start xl:max-w-[600px]">
+                      <p className="text-2xl sm:text-3xl text-black/80 w-full text-center md:text-start xl:max-w-[600px]">
                         {t?.note}
                       </p>
 
@@ -120,10 +120,10 @@ const ReviewsAndFaqs = () => {
                           className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover"
                         />
                         <div>
-                          <p className="text-black font-semibold base:text-lg sm:text-xl">
+                          <p className="text-black font-semibold text-lg sm:text-xl">
                             {t?.name}
                           </p>
-                          <p className="text-black/60 font-medium base:text-md sm:text-lg -mt-1">
+                          <p className="text-black/60 font-medium text-md sm:text-lg -mt-1">
                             {t?.role}
                           </p>
                         </div>
@@ -181,13 +181,13 @@ const ReviewsAndFaqs = () => {
         {/* --------------------------- FAQs ------------------------------------- */}
         <div className="mt-20 flex flex-col space-y-8 lg:space-y-0 lg:flex-row justify-between items-center">
           <div>
-            <p className="text-black text-3xl sm:text-[40px] mx-auto text-center lg:mx-0 lg:text-start w-fit font-medium">
+            <p className="text-black text-[35px] sm:text-[40px] mx-auto text-center lg:mx-0 lg:text-start w-fit font-medium">
               Got Questions?
             </p>
-            <p className="text-3xl sm:text-[40px] text-center lg:text-start w-fit font-medium italic mx-auto  lg:mx-0 bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon sm:mt-1">
+            <p className="text-[35px] sm:text-[40px] text-center lg:text-start w-fit font-medium italic mx-auto  lg:mx-0 bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon mt-[-5px]">
               We’ve Got Answers
             </p>
-            <p className="text-black text-center mx-auto lg:mx-0 lg:text-start max-w-md w-fit mt-2 text-lg">
+            <p className="text-black text-center mx-auto lg:mx-0 lg:text-start max-w-md w-fit mt-2 text-xl">
               Here are some frequently asked questions to get you up to speed
               with Spot’d
             </p>

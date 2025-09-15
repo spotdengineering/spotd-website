@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import Paragraph from '../../paragraph';
 import Image from 'next/image';
 import { Filled_Btn } from '../buttons/filled-btn';
 import { ArrowRightIcon, Star } from 'lucide-react';
@@ -41,10 +40,10 @@ export const Game_Content = ({
         className
       )}
     >
-      <h1 className="font-semibold text-2xl sm:text-[45px] sm:leading-15">
+      <h1 className="font-semibold text-3xl sm:text-4xl lg:text-[45px] lg:leading-15">
         {head}
       </h1>
-      <Paragraph>{text}</Paragraph>
+      <p className="text-xl">{text}</p>
     </div>
   );
 };
@@ -170,7 +169,7 @@ import {
 
 export const Chat_Card = () => {
   return (
-    <Card className="sm:w-[224px] md:-right-10 max-sm:gap-3 w-[200px] absolute top-5 sm:top-10 lg:-right-20 -right-5 sm:-right-13 *:p-0 flex flex-col bg-white border-none rounded-[30px] p-4">
+    <Card className="sm:w-[224px] max-sm:gap-3 w-[200px] absolute top-5 sm:top-10 lg:-right-20 -right-5 md:-right-10 *:p-0 flex flex-col bg-white border-none rounded-[30px] p-4">
       <CardHeader className="flex items-center gap-2">
         <Image
           src={'/mini_guy.png'}
