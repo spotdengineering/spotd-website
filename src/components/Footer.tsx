@@ -3,9 +3,12 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import { LuFacebook } from 'react-icons/lu';
 import { FaInstagram } from 'react-icons/fa6';
+import { FaTiktok } from 'react-icons/fa6';
+import { FaYoutube } from 'react-icons/fa6';
 import Link from 'next/link';
-import CustomInput from '../custom-comp/CustomInput';
-import CustomButton from '../custom-comp/CustomButton';
+import CustomInput from './custom-comp/CustomInput';
+import CustomButton from './custom-comp/CustomButton';
+import LogoBlack from './custom-comp/LogoBlack';
 
 const Footer = () => {
   const navs = [
@@ -16,18 +19,29 @@ const Footer = () => {
   ];
 
   const social = [
-    { icon: <FaXTwitter />, link: '/' },
-    { icon: <AiOutlineLinkedin />, link: '/' },
-    { icon: <LuFacebook />, link: '/' },
-    { icon: <FaInstagram />, link: '/' },
+    { icon: <FaXTwitter />, link: 'https://x.com/SpotD_CBI' },
+    {
+      icon: <AiOutlineLinkedin />,
+      link: 'https://www.linkedin.com/company/spotd-cbi',
+    },
+    {
+      icon: <LuFacebook />,
+      link: 'https://www.facebook.com/share/1AuP6X2Kko/',
+    },
+    { icon: <FaInstagram />, link: 'https://instagram.com/spotd_cbi' },
+    { icon: <FaTiktok />, link: 'https://tiktok.com/@spotd_cbi' },
+    {
+      icon: <FaYoutube />,
+      link: 'https://www.youtube.com/channel/UCbzD6DzlAbFhg56TXw8mixA',
+    },
   ];
 
   return (
-    <div className="px-4 sm:px-6 lg:px-10 2xl:px-0 relative py-10">
+    <div className="px-4 sm:px-6 lg:px-10 2xl:px-0 relative py-20">
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col lg:flex-row lg:flex-wrap xl:flex-nowrap justify-between gap-6">
           <div className="min-w-[200px] flex-shrink-0">
-            <img src="/landing-page-images/logo.png" alt="logo" />
+            <LogoBlack />
             <p className="max-w-[300px] text-black font-medium text-lg">
               We are connecting creatives, influencers and brands.
             </p>
@@ -64,7 +78,7 @@ const Footer = () => {
           />
           <CustomButton
             name="Subscribe"
-            className="bg-gradient-to-r from-brandLemon via-brandOrange to-brandPink rounded-full text-white w-fit py-6 px-9 cursor-pointer"
+            className="bg-gradient-to-r from-brandLemon via-brandOrange to-brandPink rounded-full text-white w-fit py-6 px-9 cursor-pointer text-lg"
           />
         </form>
       </div>

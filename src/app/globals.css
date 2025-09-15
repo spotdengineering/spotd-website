@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @import 'tailwindcss';
 
 @theme {
   /* BREAK-POINT */
-  --breakpoint-m1: 1285px;
-  --breakpoint-duo: 1190px;
-  --breakpoint-fold: 890px;
+  /* --breakpoint-m1: 1285px; */
+  /* --breakpoint-duo: 1190px; */
+  /* --breakpoint-fold: 890px;
   --breakpoint-tab: 800px;
   --breakpoint-minMax: 390px;
-  --breakpoint-mini: 360px;
+  --breakpoint-mini: 360px; */
 
   /* FONTS */
   --font-inter: var(--font-inter);
-  --font-plusjakarta: var(--font-plusjakarta);
+  --font-plus_jakarta_sans: Plus Jakarta Sans, sans-serif;
 
   /* COLORS */
   --color-black: #000000;
@@ -32,15 +34,20 @@
   --color-grey-90: #000000e5;
   --color-ash: #f5f5f5;
   --color-arc: #0000000d;
-  
-/*  MERGED COLORS  */
-    --color-brandPink: #e9295c;
+
+  /*  MERGED COLORS  */
+  --color-brandPink: #e9295c;
   --color-brandOrange: #ee711f;
   --color-brandLemon: #d4ea63;
+}
+
+body {
+  @apply font-plus_jakarta_sans;
+  padding: 0;
+  margin: 0;
 }
 
 /* HIDE SCROLL */
 ::-webkit-scrollbar {
   display: none;
-
 }

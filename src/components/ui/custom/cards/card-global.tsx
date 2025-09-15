@@ -23,7 +23,7 @@ export const Card_Global = ({
   return (
     <Card
       className={clsx(
-        'border-none h-fit absolute rounded-xl md:rounded-3xl w-[130px] md:w-[210px] sm:py-4 sm:px-4 p-3 *:p-0 gap-0.5 md:gap-1.5',
+        'border-none h-fit absolute rounded-xl md:rounded-3xl w-[180px] md:w-[210px] sm:py-4 sm:px-4 p-3 *:p-0 gap-0.5 md:gap-1.5',
         className
       )}
     >
@@ -35,12 +35,12 @@ export const Card_Global = ({
         className="object-contain max-sm:size-6"
       />
       <CardHeader>
-        <CardTitle className="font-medium text-xs md:text-[28px]">
+        <CardTitle className="font-medium text-md md:text-[28px]">
           {title}
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="font-normal text-[10px] md:text-base">
+        <CardDescription className="font-normal text-sm sm:text-base">
           {children}
         </CardDescription>
       </CardContent>
