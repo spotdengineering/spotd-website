@@ -23,10 +23,7 @@ export const Hero = () => {
                 matchmaking, and escrow-secured collabs.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-3 w-fit mx-auto mt-6">
-                <CustomButton
-                  name="Start getting visible"
-                  className="bg-gradient-to-r"
-                />
+                <CustomButton name="Get Spot’d" className="bg-gradient-to-r" />
                 <CustomButtonOutline name="Find out more" />
               </div>
             </div>

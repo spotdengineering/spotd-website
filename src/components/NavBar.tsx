@@ -80,7 +80,7 @@ const NavBar = () => {
 
                 <div className="flex items-start flex-wrap mt-10 gap-4 sm:gap-8">
                   <CustomButton
-                    name="Start getting visible"
+                    name="Get Spot’d"
                     className="bg-gradient-to-l !px-4"
                   />
 
