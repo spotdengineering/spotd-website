@@ -37,10 +37,12 @@ const NavBar = () => {
             ))}
           </div>
 
-          <CustomButton
-            name="Get Started"
-            className="bg-gradient-to-r lg:flex hidden"
-          />
+          <Link href="#">
+            <CustomButton
+              name="Get Started"
+              className="bg-gradient-to-r lg:flex hidden"
+            />
+          </Link>
           <div className="flex lg:hidden" onClick={handleMenu}>
             <img
               alt=""
@@ -79,12 +81,15 @@ const NavBar = () => {
                 </div>
 
                 <div className="flex items-start flex-wrap mt-10 gap-4 sm:gap-8">
-                  <CustomButton
-                    name="Get Spot’d"
-                    className="bg-gradient-to-l !px-4"
-                  />
-
-                  <CustomButtonOutline name="Find out more" />
+                  <Link href="#">
+                    <CustomButton
+                      name="Get Spot’d"
+                      className="bg-gradient-to-l !px-4"
+                    />
+                  </Link>
+                  <Link href="#">
+                    <CustomButtonOutline name="Find out more" />
+                  </Link>
                 </div>
               </motion.div>
             )}
