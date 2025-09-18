@@ -28,7 +28,7 @@ const Contact = () => {
         </div>
         {/* form */}
         <div className="relative">
-          <div className="bg-gray-50/50 p-6 py-10 rounded-4xl max-w-md w-full flex-col flex gap-5 mt-10  mx-auto">
+          <div className="bg-gray-200/30 p-6 py-10 rounded-4xl max-w-md w-full flex-col flex gap-5 mt-10  mx-auto">
             {/* name */}
             <CustomInput
               placeholder="Full name"

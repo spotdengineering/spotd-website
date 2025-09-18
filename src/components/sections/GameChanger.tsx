@@ -32,10 +32,10 @@ const Game_Changer = () => {
         </div>
 
         {/* CARDS */}
-        <Game_Card className="bg-green-100 !flex !flex-col 2xl:!flex-row">
+        <Game_Card className="bg-green-100 !flex !flex-col lg:!flex-row">
           <div className="">
             <Game_Image src="/img1.png" imgStyle="object-cover">
-              <Mini_Card className="absolute top-[20px] -right-[5%] md:right-[-30%]" />
+              <Mini_Card className="absolute top-[20px] -right-[5%] lg:right-[-10%] 2xl:right-[-30%]" />
               <Person_Card
                 img="/mini_guy.png"
                 text="Fashion Influence"
@@ -48,12 +48,12 @@ const Game_Changer = () => {
           <Game_Content
             head="Browse real, curated creative’s portfolios."
             text="On Spot’d, brands can explore curated creative’s portfolios that showcase unique style, audience, and expertise, making it easy to find the right match."
-            className="2xl:!max-w-xl !text-center 2xl:!text-start"
+            className="lg:!max-w-sm xl:!max-w-lg 2xl:!max-w-xl !text-center lg:!text-start"
           />
         </Game_Card>
 
         {/* CARD 2 */}
-        <Game_Card className="bg-org !flex !flex-col 2xl:!flex-row-reverse">
+        <Game_Card className="bg-org !flex !flex-col lg:!flex-row-reverse">
           <Game_Content
             className="hidden fold:block fold:[&_h1]:pb-9 "
             head="Use smart filters to find your fit."
@@ -75,7 +75,7 @@ const Game_Changer = () => {
           </Game_Image>
 
           <Game_Content
-            className="2xl:!max-w-xl !text-center 2xl:!text-start"
+            className="lg:!max-w-sm xl:!max-w-lg 2xl:!max-w-xl !text-center lg:!text-start"
             head="Use smart filters to find your fit."
             text="Easily navigate through Spot’d with smart filters that help you refine your search and connect with creators whose skills, style, and audience perfectly align with your brand’s goals."
           />
@@ -83,7 +83,7 @@ const Game_Changer = () => {
 
         {/* CARD 3 */}
 
-        <Game_Card className="bg-green-100 !flex !flex-col 2xl:!flex-row">
+        <Game_Card className="bg-green-100 !flex !flex-col lg:!flex-row">
           <Game_Image src="/img2.png" imgStyle="object-cover">
             <Chat_Card />
             <Person_Card
@@ -95,7 +95,7 @@ const Game_Changer = () => {
             />
           </Game_Image>
           <Game_Content
-            className="2xl:!max-w-xl !text-center 2xl:!text-start"
+            className="lg:!max-w-sm xl:!max-w-lg 2xl:!max-w-xl !text-center lg:!text-start"
             head="Connect directly, with clarity, no guesswork."
             text="On Spot’d, set clear expectations through honest conversations—building transparency, understanding, and eliminating gray areas from the start."
           />
@@ -103,7 +103,7 @@ const Game_Changer = () => {
 
         {/* CARD 4 */}
 
-        <Game_Card className="bg-org !flex !flex-col 2xl:!flex-row-reverse">
+        <Game_Card className="bg-org !flex !flex-col lg:!flex-row-reverse">
           <Game_Content
             className="hidden fold:block fold:[&_h1]:pb-9"
             head="Escrow payment safe ensures delivery."
@@ -113,18 +113,18 @@ const Game_Changer = () => {
             <Person_Card
               img="/Vector.png"
               head="Work Delivered & Approved"
-              className="absolute -left-3 sm:-left-8 md:-left-16 top-8 pr-4 sm:w-[225px] w-[170px] !text-start"
+              className="absolute -left-3 sm:-left-8 md:-left-16 lg:-left-12 xl:-left-16 top-8 pr-4 sm:w-[225px] w-[170px] !text-start"
             />{' '}
             <Person_Card
               img="/payment.png"
               head="Payment Released"
               text="Funds have been securely transferred to you."
-              className="absolute [&_article]:text-[#525252] w-full md:max-w-[350px] !p-2 !-left-[5%] md:!-left-[15%] lg:!-left-[25%] xl:!-left-[50%] !bottom-[10%]"
+              className="absolute [&_article]:text-[#525252] w-full md:max-w-[350px] !p-2 !-left-[5%] md:!-left-[15%] lg:!-left-[10%] xl:!-left-[50%] !bottom-[10%]"
             />
           </Game_Image>
 
           <Game_Content
-            className="2xl:!max-w-xl !text-center 2xl:!text-start"
+            className="lg:!max-w-sm xl:!max-w-lg 2xl:!max-w-xl !text-center lg:!text-start"
             head="Escrow payment safe ensures delivery."
             text="The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent."
           />
