@@ -45,7 +45,7 @@ export const Hero = () => {
               <p className="font-semibold text-sm my-1">Top 1%</p>
               <p className="font-medium text-sm">Available for bookings</p>
             </div>
-            <div className="w-full mx-auto relative overflow-hidden mt-16 lg:mt-20">
+            <div className="w-full mx-auto relative sm:overflow-hidden mt-16 lg:mt-20">
               <Card_Global
                 className="bg-lemon z-10 bottom-0 xl:translate-y-0  xl:top-0"
                 img="/solar.svg"
@@ -67,10 +67,10 @@ export const Hero = () => {
 
               <div className="absolute flex items-center flex-col justify-center h-full inset-0 mx-auto">
                 {/* phone */}
-                <div className="absolute inset-x-0 bottom-[-5] h-[200px] sm:h-[350px] md:h-[380px] lg:h-[450px] xl:h-80 mx-auto flex items-center flex-col justify-center w-fit">
+                <div className="absolute inset-x-0 bottom-0 h-[200px] sm:h-[350px] md:h-[380px] lg:h-[450px] xl:h-80 mx-auto flex items-center flex-col justify-center w-fit">
                   <img
                     src="/iPhone.png"
-                    className="object-cover h-[280px] sm:h-[350px] md:h-[380px] lg:h-[450px] xl:h-96"
+                    className="object-cover h-[200px] sm:h-[350px] md:h-[380px] lg:h-[450px] xl:h-96"
                   />
                 </div>
                 {/* girl with phone */}

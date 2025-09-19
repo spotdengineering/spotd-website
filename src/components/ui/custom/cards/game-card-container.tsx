@@ -169,7 +169,7 @@ import {
 
 export const Chat_Card = () => {
   return (
-    <Card className="sm:w-[224px] max-sm:gap-3 w-[200px] absolute top-5 sm:top-10 lg:-right-20 -right-5 md:-right-10 *:p-0 flex flex-col bg-white border-none rounded-[30px] p-4">
+    <Card className="sm:w-[224px] max-sm:gap-3 w-[200px] absolute top-5 sm:top-10 lg:-right-6 xl:-right-20 2xl:-right-32 -right-5 md:-right-10 *:p-0 flex flex-col bg-white border-none rounded-[30px] p-4">
       <CardHeader className="flex items-center gap-2">
         <Image
           src={'/mini_guy.png'}
