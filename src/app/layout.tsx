@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import { Toaster } from 'react-hot-toast';
+
 // import { inter, plusJakartaSans } from '../../public/fonts/fonts';
 // import Header from '@/components/Header';
 
@@ -56,6 +58,7 @@ export default function RootLayout({
       <body className="">
         <NavBar />
         <div className="pt-[100px] lg:pt-[140px]">{children}</div>
+        <Toaster />
         <Footer />
       </body>
     </html>
