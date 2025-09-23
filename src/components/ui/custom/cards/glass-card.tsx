@@ -25,7 +25,7 @@ export const Glass_Card = ({
             <CheckCheck strokeWidth={'3px'} size={'18px'} />
           </span>
         </span>
-        <CardTitle className="text-black font-medium text-xs sm:text-base">
+        <CardTitle className="sm:text-black text-white/50 font-medium text-xs sm:text-base">
           {title}
         </CardTitle>
 

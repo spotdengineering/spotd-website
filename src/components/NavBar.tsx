@@ -23,7 +23,7 @@ const NavBar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="py-5 w-full fixed top-0 left-0 right-0 mx-auto z-20 px-3 sm:px-5 lg:px-10 2xl:px-0 bg-white">
+      <div className="xl:py-5 sm:py-10 py-7  w-full fixed top-0 left-0 right-0 mx-auto z-20 px-5 lg:px-10 2xl:px-0 bg-white">
         <div className="max-w-[1440px] mx-auto w-full flex justify-between items-center">
           <LogoColored />
 
@@ -53,42 +53,46 @@ const NavBar = () => {
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                initial={{ opacity: 0, x: 100 }}
+                initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 100 }}
+                exit={{ opacity: 0, x: -100 }}
                 transition={{
                   duration: 0.4,
                   ease: 'easeInOut',
                 }}
-                className="p-6 bg-white fixed top-0 right-0 w-full sm:w-[500px] min-h-[100%] z-20 flex flex-col"
+                className="p-6 bg-white fixed top-0 right-0 w-full sm:w-[500px] min-h-[100%] z-20 flex flex-col justify-between"
                 style={{ zIndex: 'overlay' }}
               >
-                <div className="w-fit ml-auto" onClick={handleMenu}>
-                  <img
-                    alt=""
-                    src="/landing-page-images/menu close.svg"
-                    className="w-8 h-8 sm:w-10 sm:h-10 object-cover"
-                  />
+                <div className="flex flex-col">
+                  <div className="w-fit ml-auto" onClick={handleMenu}>
+                    <img
+                      alt=""
+                      src="/landing-page-images/menu close.svg"
+                      className="w-8 h-8 sm:w-10 sm:h-10 object-cover"
+                    />
+                  </div>
+                  <div className="items-start gap-8 flex-col flex mt-10">
+                    {navs?.map((n: any, index: number) => (
+                      <Link key={index} href={n?.link}>
+                        <p className="text-lg font-semibold hover:text-black/60 text-black transition-all duration-300">
+                          {n?.name}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-                <div className="items-start gap-8 flex-col flex mt-10">
-                  {navs?.map((n: any, index: number) => (
-                    <Link key={index} href={n?.link}>
-                      <p className="text-lg font-semibold hover:text-black/60 text-black transition-all duration-300">
-                        {n?.name}
-                      </p>
-                    </Link>
-                  ))}
-                </div>
-
-                <div className="flex items-start flex-wrap mt-10 gap-4 sm:gap-8">
+                <div className="flex items-start mb-10 w-full justify-between">
                   <Link href="#">
                     <CustomButton
                       name="Get Spot’d"
-                      className="bg-gradient-to-l !px-4"
+                      className="bg-gradient-to-l max-[365px]:px-6 "
                     />
                   </Link>
                   <Link href="#">
-                    <CustomButtonOutline name="Find out more" />
+                    <CustomButtonOutline
+                      name="Find out more"
+                      className="max-[365px]:px-6"
+                    />
                   </Link>
                 </div>
               </motion.div>
