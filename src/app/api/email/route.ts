@@ -10,14 +10,14 @@ export async function POST(request: NextRequest) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.example.APP_EMAIL,
-      pass: process.env.example.APP_PASSWORD,
+      user: process.env.APP_EMAIL,
+      pass: process.env.APP_PASSWORD,
     },
   });
 
   const mailOption: Mail.Options = {
-    from: process.env.example.APP_EMAIL,
-    to: process.env.example.SENDER_EMAIL,
+    from: process.env.APP_EMAIL,
+    to: process.env.SENDER_EMAIL,
     subject: `⚠️ Query alert from ${name}`,
     html: Mailer({ name, email, subject, message }),
     replyTo: email,
