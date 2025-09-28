@@ -1,7 +1,7 @@
-import React from 'react';
 import CustomInput from '../custom-comp/CustomInput';
 import CustomTextarea from '../custom-comp/CustomTextarea';
 import CustomButton from '../custom-comp/CustomButton';
+
 const Contact = () => {
   return (
     <div
@@ -28,9 +28,14 @@ const Contact = () => {
         </div>
         {/* form */}
         <div className="relative">
-          <div className="bg-gray-200/30 p-6 py-10 rounded-4xl max-w-md w-full flex-col flex gap-5 mt-10  mx-auto">
+          <form
+            action="mailto:contact@bestspoted.com"
+            method="post"
+            className="bg-gray-50/50 p-6 py-10 rounded-4xl max-w-md w-full flex-col flex gap-5 mt-10  mx-auto"
+          >
             {/* name */}
             <CustomInput
+              required
               placeholder="Full name"
               className="!text-base py-[26px] rounded-xl pl-4  bg-white"
               type="text"
@@ -38,6 +43,7 @@ const Contact = () => {
 
             {/* email */}
             <CustomInput
+              required
               placeholder="Email Address"
               className="!text-base py-[26px] rounded-xl pl-4  bg-white"
               type="email"
@@ -45,20 +51,22 @@ const Contact = () => {
 
             {/* subject */}
             <CustomInput
+              required
               placeholder="Subject/Reason for Contact"
               className="!text-base py-[26px] rounded-xl pl-4  bg-white"
               type="text"
             />
             <CustomTextarea
+              required
               placeholder="Message"
               className="!text-base rounded-xl pl-4 h-[150px] resize-none  bg-white"
             />
 
             <CustomButton
-              name="Send Message"
+              name="Send message"
               className="bg-gradient-to-r mx-auto"
             />
-          </div>
+          </form>
         </div>
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none  hidden lg:block">

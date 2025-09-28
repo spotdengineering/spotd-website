@@ -23,7 +23,7 @@ export const Card_Global = ({
   return (
     <Card
       className={clsx(
-        'border-none h-fit absolute rounded-xl md:rounded-3xl w-[180px] md:w-[210px] sm:py-4 sm:px-4 p-3 *:p-0 gap-0.5 md:gap-1.5',
+        'border-none h-fit absolute rounded-xl md:rounded-3xl w-[150px] md:w-[210px] sm:py-4 sm:px-4 p-3 *:p-0 gap-0.5 md:gap-1.5',
         className
       )}
     >
