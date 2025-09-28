@@ -63,7 +63,12 @@ const Footer = () => {
           {/* social */}
           <div className="flex gap-3 items-center font-semibold">
             {social?.map((n: any, index: number) => (
-              <Link href={n?.link} key={index}>
+              <Link
+                href={n?.link}
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="bg-gradient-to-br from-brandLemon via-brandOrange to-brandPink p-2 rounded-xl">
                   <p className="text-2xl text-white">{n?.icon}</p>
                 </div>
