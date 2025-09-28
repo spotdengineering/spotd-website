@@ -1,7 +1,10 @@
+'use client';
 import React from 'react';
 import CustomInput from '../custom-comp/CustomInput';
 import CustomTextarea from '../custom-comp/CustomTextarea';
 import CustomButton from '../custom-comp/CustomButton';
+import { motion } from 'framer-motion';
+
 const Contact = () => {
   return (
     <div
@@ -10,9 +13,19 @@ const Contact = () => {
     >
       <div className="max-w-[1440px] mx-auto">
         <div className="relative pt-12 sm:pt-20">
-          <p className=" text-center text-6xl sm:text-8xl md:text-9xl font-bold bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon">
-            Contact Us
-          </p>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              ease: 'easeOut',
+              duration: 0.5,
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            <p className=" text-center text-6xl sm:text-8xl md:text-9xl font-bold bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon">
+              Contact Us
+            </p>
+          </motion.div>
 
           <div className="absolute top-0 left-0 right-0 mx-auto w-fit">
             <img
@@ -21,10 +34,20 @@ const Contact = () => {
               alt="phone"
             />
           </div>
-          <p className="text-black text-lg lg:text-2xl text-center max-w-xl w-fit mx-auto mt-6 sm:mt-16 md:mt-8">
-            We’re just a message away, ready to answer your questions, explore
-            ideas, and help you connect seamlessly on Spot’d
-          </p>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              ease: 'easeOut',
+              duration: 0.5,
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            <p className="text-black text-lg lg:text-2xl text-center max-w-xl w-fit mx-auto mt-6 sm:mt-16 md:mt-8">
+              We’re just a message away, ready to answer your questions, explore
+              ideas, and help you connect seamlessly on Spot’d
+            </p>
+          </motion.div>
         </div>
         {/* form */}
         <div className="relative">

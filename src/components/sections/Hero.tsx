@@ -1,21 +1,55 @@
+'use client';
 import React from 'react';
 import { Card_Global } from '../ui/custom/cards/card-global';
 import { Glass_Card } from '../ui/custom/cards/glass-card';
 import CustomButton from '../custom-comp/CustomButton';
 import CustomButtonOutline from '../custom-comp/CustomButtonOutline';
-
+import { motion } from 'framer-motion';
 export const Hero = () => {
+  const sentence = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.08, duration: 0.5 },
+    },
+  };
+
+  const word = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const text = 'Spot’d helps brands find creatives who truly get it.';
+  const words = text.split(' ');
   return (
     <>
       <div className="px-4 sm:px-6 lg:px-10 2xl:px-0">
         <div className="max-w-[1440px] mx-auto py-6 relative">
           <div className="flex flex-col items-center gap-7">
-            <h1 className="font-medium text-5xl sm:text-7xl text-center max-w-4xl">
-              Spot’d helps brands find creatives who{' '}
-              <span className="italic bg-gradient-to-r from-pink via-orange to-lemon bg-clip-text text-transparent">
-                truly get it.
-              </span>
-            </h1>
+            <motion.h1
+              className="font-medium text-5xl sm:text-7xl text-center max-w-4xl"
+              variants={sentence}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              {words.map((w, i) => (
+                <motion.span
+                  key={i}
+                  variants={word}
+                  style={{ display: 'inline-block', marginRight: '8px' }}
+                >
+                  {w === 'truly' || w === 'get' || w === 'it.' ? (
+                    <span className="italic bg-gradient-to-r from-pink via-orange to-lemon bg-clip-text text-transparent">
+                      {w}
+                    </span>
+                  ) : (
+                    w
+                  )}
+                </motion.span>
+              ))}
+            </motion.h1>
 
             <div>
               <p className="text-xl sm:text-2xl font-normal max-w-xl text-center">

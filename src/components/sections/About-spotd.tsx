@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';
 import CustomButton from '../custom-comp/CustomButton';
-
+import { motion } from 'framer-motion';
 const About_Spotd = () => {
   const info = [
     {
@@ -36,25 +37,44 @@ const About_Spotd = () => {
             {/* texts */}
             <div className="w-full bg-[url('/circle.svg')] bg-no-repeat bg-contain flex flex-col">
               <div className="w-full">
-                <p className="font-medium text-black text-2xl sm:text-3xl max-w-5xl mb-10 lg:mb-12 text-center lg:text-start">
-                  Finding the right influencer or creative shouldn’t feel like
-                  guesswork. Brands struggle to discover authentic influencers.
-                  <span className="text-black/60">
-                    Creatives lack visibility to the right opportunities.
-                    Influencers often get mismatched with campaigns that don’t
-                    fit their voice.
-                  </span>
-                </p>
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{
+                    ease: 'easeOut',
+                    duration: 0.3,
+                  }}
+                  viewport={{ once: false, amount: 0.5 }}
+                >
+                  <p className="font-medium text-black text-2xl sm:text-3xl max-w-5xl mb-10 lg:mb-12 text-center lg:text-start">
+                    Finding the right influencer or creative shouldn’t feel like
+                    guesswork. Brands struggle to discover authentic
+                    influencers.
+                    <span className="text-black/60">
+                      Creatives lack visibility to the right opportunities.
+                      Influencers often get mismatched with campaigns that don’t
+                      fit their voice.
+                    </span>
+                  </p>
+                </motion.div>
                 <div className="flex flex-wrap justify-center lg:justify-start lg:items-stretch flex-1 gap-4 mt-auto">
                   {info?.map((i, index) => (
-                    <div
+                    <motion.div
                       className="p-6 bg-[#F5F5F5] rounded-2xl max-w-[300px] w-full sm:w-fit flex flex-col justify-center items-center lg:items-start text-center lg:text-start"
                       key={index}
+                      initial={{ y: 100, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{
+                        ease: 'easeOut',
+                        duration: 0.5,
+                        delay: index * 0.2,
+                      }}
+                      viewport={{ once: false, amount: 0.5 }}
                     >
                       <img src={i?.icon} alt="" className="w-10 h-10 mb-2" />
                       <p className="text-xl font-semibold">{i?.name}</p>
                       <p className="text-lg">{i?.sub}</p>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -76,20 +96,48 @@ const About_Spotd = () => {
               className="h-60 w-60 ml-auto object-cover hidden lg:flex"
             />
             <div className="sm:absolute h-full w-full flex flex-col justify-center align-middle p-6 lg:px-10 2xl:p-0">
-              <p className="text-white font-bold text-center mx-auto text-3xl sm:text-4xl max-w-4xl">
-                With Spot’d its different. Creators get visibility and value.
-                And brands finally find their people.
-              </p>
-              <p className="text-white text-xl text-center max-w-2xl w-fit mx-auto mt-4">
-                Join a trusted space where creators showcase their work and
-                brands. connect with the right talent effortlessly.
-              </p>
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  ease: 'easeOut',
+                  duration: 0.3,
+                }}
+                viewport={{ once: false, amount: 0.5 }}
+              >
+                <p className="text-white font-bold text-center mx-auto text-3xl sm:text-4xl max-w-4xl">
+                  With Spot’d its different. Creators get visibility and value.
+                  And brands finally find their people.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  ease: 'easeOut',
+                  duration: 0.3,
+                }}
+                viewport={{ once: false, amount: 0.5 }}
+              >
+                <p className="text-white text-xl text-center max-w-2xl w-fit mx-auto mt-4">
+                  Join a trusted space where creators showcase their work and
+                  brands. connect with the right talent effortlessly.
+                </p>
+              </motion.div>
 
               <div className="flex flex-wrap gap-4 w-fit mx-auto justify-center sm:justify-start mt-6">
                 {join?.map((j, index: number) => (
-                  <div
+                  <motion.div
                     className={`p-3 px-6 rounded-full w-fit`}
                     key={index}
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.2,
+                      ease: 'easeOut',
+                    }}
                     style={{ backgroundColor: j?.bg }}
                   >
                     <p
@@ -98,7 +146,7 @@ const About_Spotd = () => {
                     >
                       {j?.name}
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
