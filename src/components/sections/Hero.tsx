@@ -4,6 +4,7 @@ import { Card_Global } from '../ui/custom/cards/card-global';
 import { Glass_Card } from '../ui/custom/cards/glass-card';
 import CustomButton from '../custom-comp/CustomButton';
 import CustomButtonOutline from '../custom-comp/CustomButtonOutline';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 export const Hero = () => {
   const sentence = {
@@ -57,11 +58,15 @@ export const Hero = () => {
                 matchmaking, and escrow-secured collabs.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-3 w-fit mx-auto mt-6">
-                <CustomButton
-                  name="Start getting visible"
-                  className="bg-gradient-to-r"
-                />
-                <CustomButtonOutline name="Find out more" />
+                <Link href="#">
+                  <CustomButton
+                    name="Get Spot’d"
+                    className="bg-gradient-to-r"
+                  />
+                </Link>
+                <Link href="#">
+                  <CustomButtonOutline name="Find out more" />
+                </Link>
               </div>
             </div>
 
