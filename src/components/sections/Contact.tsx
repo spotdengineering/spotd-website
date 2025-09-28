@@ -1,32 +1,8 @@
-'use client';
 import CustomInput from '../custom-comp/CustomInput';
 import CustomTextarea from '../custom-comp/CustomTextarea';
 import CustomButton from '../custom-comp/CustomButton';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { ContactSchema, FormData } from '../types/form-data';
-import { SendEmail } from '@/app/utils/send-email';
-import toast from 'react-hot-toast';
 
 const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { isSubmitting },
-  } = useForm<FormData>({
-    resolver: zodResolver(ContactSchema),
-  });
-
-  const onSubmit = async (data: FormData) => {
-    try {
-      const res = await SendEmail(data);
-      toast.success(res.message);
-      reset();
-    } catch (err) {
-      toast.error(`Failed to send message. Please try again `);
-    }
-  };
   return (
     <div
       className="px-4 sm:px-6 lg:px-10 2xl:px-0 relative scroll-mt-[100px] lg:scroll-mt-[140px]"
@@ -53,13 +29,12 @@ const Contact = () => {
         {/* form */}
         <div className="relative">
           <form
-            onSubmit={handleSubmit(onSubmit)}
+            action="mailto:contact@bestspoted.com"
+            method="post"
             className="bg-gray-50/50 p-6 py-10 rounded-4xl max-w-md w-full flex-col flex gap-5 mt-10  mx-auto"
           >
-
             {/* name */}
             <CustomInput
-              {...register('name', { required: true })}
               required
               placeholder="Full name"
               className="!text-base py-[26px] rounded-xl pl-4  bg-white"
@@ -68,7 +43,6 @@ const Contact = () => {
 
             {/* email */}
             <CustomInput
-              {...register('email', { required: true })}
               required
               placeholder="Email Address"
               className="!text-base py-[26px] rounded-xl pl-4  bg-white"
@@ -77,26 +51,21 @@ const Contact = () => {
 
             {/* subject */}
             <CustomInput
-              {...register('subject', { required: true })}
               required
               placeholder="Subject/Reason for Contact"
               className="!text-base py-[26px] rounded-xl pl-4  bg-white"
               type="text"
             />
             <CustomTextarea
-              {...register('message', { required: true })}
               required
               placeholder="Message"
               className="!text-base rounded-xl pl-4 h-[150px] resize-none  bg-white"
             />
 
             <CustomButton
-              disabled={isSubmitting}
               name="Send message"
               className="bg-gradient-to-r mx-auto"
-            >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </CustomButton>
+            />
           </form>
         </div>
 
