@@ -58,7 +58,7 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="absolute top-0 left-0 right-0 mx-auto w-fit">
+          <div className="absolute -top-2 left-0 right-0 mx-auto w-fit">
             <img
               src="/landing-page-images/phone.png"
               className="w-14 sm:w-24 md:h-60 object-contain sm:object-cover"
@@ -74,7 +74,7 @@ const Contact = () => {
             }}
             viewport={{ once: false, amount: 0.5 }}
           >
-            <p className="text-black text-lg lg:text-2xl text-center max-w-xl w-fit mx-auto mt-6 sm:mt-16 md:mt-8">
+            <p className="text-black text-lg lg:text-2xl text-center max-w-2xl w-fit mx-auto mt-6 sm:mt-16 md:mt-4">
               We’re just a message away, ready to answer your questions, explore
               ideas, and help you connect seamlessly on Spot’d
             </p>
