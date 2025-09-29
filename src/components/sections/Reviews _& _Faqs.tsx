@@ -6,6 +6,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback } from 'react';
 import { TbListSearch } from 'react-icons/tb';
 import { FaEye } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import {
   Accordion,
   AccordionContent,
@@ -76,16 +77,51 @@ const ReviewsAndFaqs = () => {
     <div className="px-4 sm:px-6 lg:px-10 2xl:px-0">
       <div className="max-w-[1440px] mx-auto">
         {/* ------------------------------reviews -------------------------------- */}
-        <p className="text-black text-[35px] sm:text-[50px] text-center w-fit mx-auto font-medium">
-          Results that Speak
-        </p>
-        <p className="text-[35px] sm:text-[50px] text-center w-fit mx-auto font-medium italic bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon mt-[-8px]">
-          Louder Than Words
-        </p>
-        <p className="text-black text-center max-w-md w-fit mx-auto mt-2 text-xl">
-          From discovery to delivery, Spot’d ensures clarity, security, and
-          results.
-        </p>
+        {/* <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 0.4,
+            ease: 'easeOut',
+          }}
+        >
+          <p className="text-black text-[35px] sm:text-[50px] text-center w-fit mx-auto font-medium">
+            Results that Speak
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.1,
+            ease: 'easeOut',
+          }}
+        >
+          <p className="text-[35px] sm:text-[50px] text-center w-fit mx-auto font-medium italic bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon mt-[-8px]">
+            Louder Than Words
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.2,
+            ease: 'easeOut',
+          }}
+        >
+          <p className="text-black text-center max-w-md w-fit mx-auto mt-2 text-xl">
+            From discovery to delivery, Spot’d ensures clarity, security, and
+            results.
+          </p>
+        </motion.div> */}
+
         <div className="flex w-full flex-col lg:flex-row items-stretch mt-8 sm:mt-16">
           {/* Carousel */}
           <div
@@ -152,19 +188,32 @@ const ReviewsAndFaqs = () => {
           </div>
 
           <div className="lg:max-w-[30%] xl:max-w-[25%] 2xl:max-w-[20%] w-full rounded-3xl bg-gradient-to-tr from-brandPink via-brandOrange to-brandLemon p-6 flex flex-col">
-            <div>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false, amount: 0.5 }}
+            >
               <div className="text-white font-semibold text-7xl sm:text-8xl sm:font-medium text-center lg:text-start">
                 24k
               </div>
               <div className="text-white text-lg sm:text-xl font-medium text-center lg:text-start">
                 pain points solved
               </div>
-            </div>
+            </motion.div>
             <div className="flex flex-wrap items-center justify-center lg:flex-col lg:items-start lg:justify-start gap-2 mt-6 lg:mt-auto">
               {join?.map((j, index: number) => (
-                <div
+                <motion.div
                   className="bg-[#FDF1E9] p-3 px-6 rounded-full w-fit"
                   key={index}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: false, amount: 0.5 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.2,
+                    ease: 'easeOut',
+                  }}
                 >
                   <p
                     className="font-semibold 2xl:text-xl"
@@ -172,7 +221,7 @@ const ReviewsAndFaqs = () => {
                   >
                     {j?.name}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -184,16 +233,49 @@ const ReviewsAndFaqs = () => {
           id="faq"
         >
           <div>
-            <p className="text-black text-[35px] sm:text-[40px] mx-auto text-center lg:mx-0 lg:text-start w-fit font-medium">
-              Got Questions?
-            </p>
-            <p className="text-[35px] sm:text-[40px] text-center lg:text-start w-fit font-medium italic mx-auto  lg:mx-0 bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon mt-[-5px]">
-              We’ve Got Answers
-            </p>
-            <p className="text-black text-center mx-auto lg:mx-0 lg:text-start max-w-md w-fit mt-2 text-xl">
-              Here are some frequently asked questions to get you up to speed
-              with Spot’d
-            </p>
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{
+                duration: 0.4,
+                // delay: 0.1,
+                ease: 'easeOut',
+              }}
+            >
+              <p className="text-black text-[35px] sm:text-[40px] mx-auto text-center lg:mx-0 lg:text-start w-fit font-medium">
+                Got Questions?
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{
+                duration: 0.4,
+                delay: 0.1,
+                ease: 'easeOut',
+              }}
+            >
+              <p className="text-[35px] sm:text-[40px] text-center lg:text-start w-fit font-medium italic mx-auto  lg:mx-0 bg-clip-text text-transparent bg-linear-to-r from-brandPink via-brandOrange to-brandLemon mt-[-5px]">
+                We’ve Got Answers
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{
+                duration: 0.4,
+                delay: 0.3,
+                ease: 'easeOut',
+              }}
+            >
+              <p className="text-black text-center mx-auto lg:mx-0 lg:text-start max-w-md w-fit mt-2 text-xl">
+                Here are some frequently asked questions to get you up to speed
+                with Spot’d
+              </p>
+            </motion.div>
           </div>
           <div className="bg-[#F4F4F4] px-6 py-10 rounded-4xl w-full lg:w-fit">
             <Accordion
@@ -226,62 +308,98 @@ const ReviewsAndFaqs = () => {
         <div className="flex items-stretch w-full gap-4 mt-20 flex-col lg:flex-row">
           <div className="bg-[url(/landing-page-images/find-creators.png)] rounded-4xl p-4 lg:max-w-[70%] bg-no-repeat bg-cover flex flex-col w-full ">
             {/* info 1 */}
-            <div className="bg-[rgba(255,255,255,0.2)] rounded-4xl p-2 w-fit backdrop-blur-xs mb-5 lg:mb-0">
-              <div className="bg-white/90 p-6 rounded-4xl w-fit">
-                <div className="max-w-[300px]">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-full aspect-square w-16 flex justify-center items-center bg-gradient-to-r from-brandPink via-brandOrange to-brandLemon">
-                      <p className="text-white text-4xl">
-                        <TbListSearch />
+            <motion.div
+              initial={{ y: -100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.4,
+                // delay: 0.3,
+                ease: 'easeOut',
+              }}
+            >
+              <div className="bg-[rgba(255,255,255,0.2)] rounded-4xl p-2 w-fit backdrop-blur-xs mb-5 lg:mb-0">
+                <div className="bg-white/90 p-6 rounded-4xl w-fit">
+                  <div className="max-w-[300px]">
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full aspect-square w-16 flex justify-center items-center bg-gradient-to-r from-brandPink via-brandOrange to-brandLemon">
+                        <p className="text-white text-4xl">
+                          <TbListSearch />
+                        </p>
+                      </div>
+                      <p className="text-black text-2xl font-medium max">
+                        Find Creators That Truly Fit
                       </p>
                     </div>
-                    <p className="text-black text-2xl font-medium max">
-                      Find Creators That Truly Fit
+                    <p className="text-[#606060] text-lg mt-3">
+                      Use smart filters to discover authentic creators who align
+                      with your brand’s style, values, and audience—making
+                      collaborations seamless and impactful.
                     </p>
                   </div>
-                  <p className="text-[#606060] text-lg mt-3">
-                    Use smart filters to discover authentic creators who align
-                    with your brand’s style, values, and audience—making
-                    collaborations seamless and impactful.
-                  </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* info 2 */}
-            <div className="bg-[rgba(255,255,255,0.2)] rounded-4xl p-2 w-fit backdrop-blur-xs mt-auto ml-auto">
-              <div className="bg-white/90 p-6 rounded-4xl w-fit">
-                <div className="max-w-[280px]">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-full aspect-square w-14 flex justify-center items-center bg-gradient-to-t from-brandPink via-brandOrange to-brandLemon">
-                      <p className="text-white text-4xl">
-                        <FaEye />
+            <motion.div
+              initial={{ y: -100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.4,
+                ease: 'easeOut',
+              }}
+            >
+              <div className="bg-[rgba(255,255,255,0.2)] rounded-4xl p-2 w-fit backdrop-blur-xs mt-auto ml-auto">
+                <div className="bg-white/90 p-6 rounded-4xl w-fit">
+                  <div className="max-w-[280px]">
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full aspect-square w-14 flex justify-center items-center bg-gradient-to-t from-brandPink via-brandOrange to-brandLemon">
+                        <p className="text-white text-4xl">
+                          <FaEye />
+                        </p>
+                      </div>
+                      <p className="text-black text-2xl font-medium max-w-[150px]">
+                        Showcase Your Talent
                       </p>
                     </div>
-                    <p className="text-black text-2xl font-medium max-w-[150px]">
-                      Showcase Your Talent
+                    <p className="text-[#606060] text-lg mt-3">
+                      Build a portfolio that gets you noticed. Spot’d helps you
+                      gain visibility, connect with the right brands, and grow
+                      your influence.
                     </p>
                   </div>
-                  <p className="text-[#606060] text-lg mt-3">
-                    Build a portfolio that gets you noticed. Spot’d helps you
-                    gain visibility, connect with the right brands, and grow
-                    your influence.
-                  </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="bg-gradient-to-tl from-brandPink via-brandOrange to-brandLemon p-6 rounded-4xl lg:max-w-[30%] w-full flex flex-col justify-center">
-            <p className="text-white text-3xl lg:text-4xl font-bold text-center">
-              Where creators get visibility and value. And brands finally find
-              their people.
-            </p>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <p className="text-white text-3xl lg:text-4xl font-bold text-center">
+                Where creators get visibility and value. And brands finally find
+                their people.
+              </p>
+            </motion.div>
             <div className="flex flex-wrap items-center justify-center gap-2 mt-12 lg:mt-8 ">
               {join?.map((j, index: number) => (
-                <div
+                <motion.div
                   className="bg-[#FDF1E9] p-3 px-6 rounded-full w-fit"
                   key={index}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: false, amount: 0.5 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.2,
+                    ease: 'easeOut',
+                  }}
                 >
                   <p
                     className="font-semibold 2xl:text-xl"
@@ -289,7 +407,7 @@ const ReviewsAndFaqs = () => {
                   >
                     {j?.name}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
