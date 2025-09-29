@@ -76,6 +76,15 @@ const About_Spotd = () => {
                       <p className="text-lg">{i?.sub}</p>
                     </motion.div>
                   ))}
+
+                  {/* phone */}
+                  <div className="">
+                    <img
+                      className="h-[350px] lg:h-[450px] w-[500px] object-contain"
+                      alt=""
+                      src="/iMax.png"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
