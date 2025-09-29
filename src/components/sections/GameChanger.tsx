@@ -139,7 +139,7 @@ const Game_Changer = () => {
               img="/payment.png"
               head="Payment Released"
               text="Funds have been securely transferred to you."
-              className="absolute [&_article]:text-[#525252] w-full md:max-w-[350px] !p-2 !-left-[5%] md:!-left-[15%] lg:!-left-[10%] xl:!-left-[50%] !bottom-[10%]"
+              className="absolute [&_article]:text-[#525252] md:max-w-[355px] !p-2 !-left-[5%] md:!-left-[15%] lg:!-left-[10%] xl:!-left-[50%] !bottom-[10%]"
             />
           </Game_Image>
           <motion.div

@@ -26,10 +26,10 @@ const About_Spotd = () => {
     <>
       <div className="px-4 sm:px-6 lg:px-10 2xl:px-0">
         <div className="max-w-[1440px] mx-auto relative">
-          <div className="mx-auto w-fit lg:w-full lg:mx-0">
+          <div>
             <CustomButton
               name="The problem"
-              className="!rounded-sm bg-gradient-to-r mb-5"
+              className="!rounded-sm bg-gradient-to-r mb-5 cursor-text"
             />
           </div>
 
@@ -78,15 +78,6 @@ const About_Spotd = () => {
                   ))}
                 </div>
               </div>
-            </div>
-
-            {/* phone */}
-            <div className="">
-              <img
-                className="h-[350px] lg:h-[450px] w-[500px] object-contain"
-                alt=""
-                src="/iMax.png"
-              />
             </div>
           </div>
 

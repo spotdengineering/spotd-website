@@ -1,11 +1,42 @@
 'use client';
-import React from 'react';
+import { useState } from 'react';
 import CustomInput from '../custom-comp/CustomInput';
 import CustomTextarea from '../custom-comp/CustomTextarea';
 import CustomButton from '../custom-comp/CustomButton';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const createMailtoLink = () => {
+    const mailto = 'contact@bestspoted.com';
+    const subjectParam = encodeURIComponent(
+      formData.subject || "Contact from Spot'd Website"
+    );
+    const bodyParam = encodeURIComponent(
+      `Hello, I'm ${formData.fullName}.\n\n${formData.message}`
+    );
+
+    return `mailto:${mailto}?subject=${subjectParam}&body=${bodyParam}`;
+  };
+
+  const submitHandler = (e: React.FormEvent) => {
+    e.preventDefault();
+    const mailtoLink = createMailtoLink();
+    window.open(mailtoLink, '_blank', 'noopener');
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
   return (
     <div
       className="px-4 sm:px-6 lg:px-10 2xl:px-0 relative scroll-mt-[100px] lg:scroll-mt-[140px]"
@@ -51,37 +82,60 @@ const Contact = () => {
         </div>
         {/* form */}
         <div className="relative">
-          <div className="bg-gray-200/30 p-6 py-10 rounded-4xl max-w-md w-full flex-col flex gap-5 mt-10  mx-auto">
+          <form
+            onSubmit={submitHandler}
+            className="bg-[#F4F4F480] p-6 rounded-2xl max-w-md w-full flex-col flex gap-5 mt-10 mx-auto"
+          >
             {/* name */}
             <CustomInput
+              required
               placeholder="Full name"
-              className="!text-base py-[26px] rounded-xl pl-4  bg-white"
+              className="!text-base py-[26px] rounded-xl pl-4 bg-white"
               type="text"
+              value={formData.fullName}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                handleInputChange('fullName', e.target.value)
+              }
             />
 
             {/* email */}
             <CustomInput
+              required
               placeholder="Email Address"
               className="!text-base py-[26px] rounded-xl pl-4  bg-white"
               type="email"
+              value={formData.email}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                handleInputChange('email', e.target.value)
+              }
             />
 
             {/* subject */}
             <CustomInput
+              required
               placeholder="Subject/Reason for Contact"
               className="!text-base py-[26px] rounded-xl pl-4  bg-white"
               type="text"
+              value={formData.subject}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                handleInputChange('subject', e.target.value)
+              }
             />
             <CustomTextarea
+              required
               placeholder="Message"
               className="!text-base rounded-xl pl-4 h-[150px] resize-none  bg-white"
+              value={formData.message}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                handleInputChange('message', e.target.value)
+              }
             />
 
             <CustomButton
-              name="Send Message"
+              name="Send message"
               className="bg-gradient-to-r mx-auto"
             />
-          </div>
+          </form>
         </div>
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none  hidden lg:block">
