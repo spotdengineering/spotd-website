@@ -3,16 +3,7 @@
 @import 'tailwindcss';
 
 @theme {
-  /* BREAK-POINT */
-  /* --breakpoint-m1: 1285px; */
-  /* --breakpoint-duo: 1190px; */
-  /* --breakpoint-fold: 890px;
-  --breakpoint-tab: 800px;
-  --breakpoint-minMax: 390px;
-  --breakpoint-mini: 360px; */
-
   /* FONTS */
-  --font-inter: var(--font-inter);
   --font-plus_jakarta_sans: Plus Jakarta Sans, sans-serif;
 
   /* COLORS */
