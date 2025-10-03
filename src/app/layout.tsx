@@ -4,14 +4,10 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { Toaster } from 'react-hot-toast';
 
-// import { inter, plusJakartaSans } from '../../public/fonts/fonts';
-// import Header from '@/components/Header';
-
 export const metadata: Metadata = {
   title: `Spot'd`,
   description: 'We are connecting creatives, influencers and brands.',
 
-  // ✅ Open Graph
   openGraph: {
     title: "Spot'd – Game Changer",
     description:
@@ -30,7 +26,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  // ✅ Twitter Card
   twitter: {
     card: 'summary_large_image',
     title: "Spot'd – Game Changer",
@@ -40,7 +35,6 @@ export const metadata: Metadata = {
     creator: 'https://x.com/SpotD_CBI',
   },
 
-  // ✅ Icons
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',

@@ -56,7 +56,7 @@ export const Hero = () => {
               No random DMs. No ghosting. Just real portfolios, smart
               matchmaking, and escrow-secured collabs.
             </p>
-            <div className="flex items-center gap-3 w-fit mx-auto ">
+            <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-fit mx-auto">
               <Link href="#">
                 <CustomButton name="Get Spot’d" className="bg-gradient-to-r " />
               </Link>
@@ -80,7 +80,7 @@ export const Hero = () => {
           </div>
           <div className="w-full mx-auto relative sm:overflow-hidden mt-5 lg:mt-20">
             <Card_Global
-              className="bg-lemon z-10 -bottom-10 xl:translate-y-0  xl:top-0"
+              className="bg-lemon z-10 bottom-0 lg:-bottom-10 xl:translate-y-0 xl:top-0"
               img="/solar.svg"
               title="Globally"
             >

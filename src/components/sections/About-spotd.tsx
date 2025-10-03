@@ -26,14 +26,14 @@ const About_Spotd = () => {
     <>
       <div className="px-4 sm:px-6 lg:px-10 2xl:px-0">
         <div className="max-w-[1440px] mx-auto relative">
-          <div>
+          <div className="w-full">
             <CustomButton
               name="The problem"
               className="!rounded-sm bg-gradient-to-r mb-5 cursor-text"
             />
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center  flex-1 w-fit gap-8 lg:gap-0">
+          <div className="flex flex-col lg:flex-row lg:items-center  flex-1 w-fit gap-8 lg:gap-0">
             {/* texts */}
             <div className="w-full bg-[url('/circle.svg')] bg-no-repeat bg-contain flex flex-col">
               <div className="w-full">
@@ -44,12 +44,13 @@ const About_Spotd = () => {
                     ease: 'easeOut',
                     duration: 0.3,
                   }}
-                  viewport={{ once: false, amount: 0.5 }}
+                  viewport={{ once: true, amount: 0.5 }}
                 >
-                  <p className="font-medium text-black text-2xl sm:text-3xl max-w-5xl mb-10 lg:mb-12 text-center lg:text-start">
+                  <p className="font-medium text-black text-2xl sm:text-3xl max-w-5xl mb-10 lg:mb-12 text-start ">
                     Finding the right influencer or creative shouldn’t feel like
                     guesswork. Brands struggle to discover authentic
                     influencers.
+                    <br className="lg:hidden" />
                     <span className="text-black/60">
                       Creatives lack visibility to the right opportunities.
                       Influencers often get mismatched with campaigns that don’t
@@ -57,7 +58,7 @@ const About_Spotd = () => {
                     </span>
                   </p>
                 </motion.div>
-                <div className="flex flex-wrap justify-center lg:justify-start lg:items-stretch flex-1 gap-4 mt-auto">
+                <div className="flex flex-wrap justify-start lg:items-stretch flex-1 gap-4 mt-auto">
                   {info?.map((i, index) => (
                     <motion.div
                       className="p-6 bg-[#F5F5F5] rounded-2xl max-w-[300px] w-full sm:w-fit flex flex-col justify-center items-center lg:items-start text-center lg:text-start"
@@ -80,9 +81,9 @@ const About_Spotd = () => {
               </div>
             </div>
             {/* phone */}
-            <div className="">
+            <div className="hidden lg:flex">
               <img
-                className="h-[350px] lg:h-[450px] w-[500px] object-contain"
+                className="h-[350px] lg:h-[450px] lg:w-[500px] object-contain"
                 alt=""
                 src="/iMax.png"
               />
