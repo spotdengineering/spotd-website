@@ -18,8 +18,8 @@ const About_Spotd = () => {
   ];
 
   const join = [
-    { name: 'Join as a Creator', bg: '#f2f8cf', color: '#59622A' },
-    { name: 'Join as an Influencer', bg: '#fad3ba', color: '#D9671C' },
+    { name: 'Join as a Creative', bg: '#f2f8cf', color: '#59622A' },
+    { name: 'Join as a Brand', bg: '#fad3ba', color: '#D9671C' },
   ];
 
   return (
@@ -61,7 +61,7 @@ const About_Spotd = () => {
                 <div className="flex flex-wrap justify-start lg:items-stretch flex-1 gap-4 mt-auto">
                   {info?.map((i, index) => (
                     <motion.div
-                      className="p-6 bg-[#F5F5F5] rounded-2xl max-w-[300px] w-full sm:w-fit flex flex-col justify-center items-center lg:items-start text-center lg:text-start"
+                      className="p-6 bg-[#F5F5F5] rounded-2xl sm:max-w-[300px] w-full sm:w-fit flex flex-col justify-center items-center lg:items-start text-center lg:text-start"
                       key={index}
                       initial={{ y: 100, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
@@ -120,8 +120,8 @@ const About_Spotd = () => {
                 viewport={{ once: false, amount: 0.5 }}
               >
                 <p className="text-white text-xl text-center max-w-2xl w-fit mx-auto mt-4">
-                  Join a trusted space where creators showcase their work and
-                  brands. connect with the right talent effortlessly.
+                  Join a trusted space where the work of creatives are showcased
+                  and brands connect with the right talent effortlessly.
                 </p>
               </motion.div>
 

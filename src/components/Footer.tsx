@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="min-w-[200px] flex-shrink-0">
             <LogoBlack />
             <p className="max-w-[300px] text-black font-medium text-lg">
-              We are connecting creatives, influencers and brands.
+              The Creative Marketplace for Brands, Creatives and Influencers
             </p>
           </div>
 
