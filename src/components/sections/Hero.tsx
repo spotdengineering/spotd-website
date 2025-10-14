@@ -58,7 +58,10 @@ export const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-fit mx-auto">
               <Link href="#">
-                <CustomButton name="Get Spot’d" className="bg-gradient-to-r " />
+                <CustomButton
+                  name="Start getting visible"
+                  className="bg-gradient-to-r "
+                />
               </Link>
               <Link href="#">
                 <CustomButtonOutline
@@ -69,7 +72,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className="hidden xl:block border-grey bg-white h-fit p-2 rounded-2xl shadow w-[200px] absolute right-0 translate-y-3/4">
+          <div className="hidden xl:block border-grey bg-white h-fit p-2 rounded-2xl shadow w-[200px] absolute right-0 top-40">
             <img
               src="/her.png"
               alt="lady"

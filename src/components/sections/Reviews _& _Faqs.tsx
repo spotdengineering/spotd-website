@@ -49,9 +49,8 @@ const ReviewsAndFaqs = () => {
   ];
 
   const join = [
-    { name: 'Join as a Creator', color: '#D42554' },
-    { name: 'Join as an Influencer', color: '#D42554' },
     { name: 'Join as a Brand', color: '#D9671C' },
+    { name: 'Join as a Creator', color: '#D42554' },
   ];
 
   const faq = [
@@ -198,7 +197,7 @@ const ReviewsAndFaqs = () => {
                 24k
               </div>
               <div className="text-white text-lg sm:text-xl font-medium text-center lg:text-start">
-                pain points solved
+                Audience reached
               </div>
             </motion.div>
             <div className="flex flex-wrap items-center justify-center lg:flex-col lg:items-start lg:justify-start gap-2 mt-6 lg:mt-auto">
@@ -383,8 +382,8 @@ const ReviewsAndFaqs = () => {
               viewport={{ once: false, amount: 0.5 }}
             >
               <p className="text-white text-3xl lg:text-4xl font-bold text-center">
-                Where creators get visibility and value. And brands finally find
-                their people.
+                Where creatives get visibility and value. And brands finally
+                find their people.
               </p>
             </motion.div>
             <div className="flex flex-wrap items-center justify-center gap-2 mt-12 lg:mt-8 ">

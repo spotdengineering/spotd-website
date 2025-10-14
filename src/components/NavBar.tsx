@@ -81,10 +81,10 @@ const NavBar = () => {
                     ))}
                   </div>
                 </div>
-                <div className="flex items-start mb-10 w-full justify-between">
+                <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row items-start mb-10 w-full justify-between">
                   <Link href="#">
                     <CustomButton
-                      name="Get Spot’d"
+                      name="Start getting visible"
                       className="bg-gradient-to-l max-[365px]:px-6 "
                     />
                   </Link>
