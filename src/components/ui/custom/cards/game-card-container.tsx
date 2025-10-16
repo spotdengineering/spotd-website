@@ -125,7 +125,7 @@ export const Person_Card = ({
   return (
     <div
       className={clsx(
-        'shadow-lg border max-sm:pr-3 bg-white border-white p-1 sm:p-2 gap-2.5 flex items-center rounded-4xl sm:rounded-[60px] ',
+        'shadow-lg border max-sm:pr-3 bg-white border-white p-1 sm:p-2 gap-2.5 flex items-center rounded-4xl sm:rounded-[60px] overflow-hidden',
         className
       )}
     >
@@ -134,7 +134,7 @@ export const Person_Card = ({
         alt="guy"
         width={68}
         height={68}
-        className=" object-contain max-sm:size-9"
+        className=" object-contain max-sm:size-9 rounded-4xl"
       />
       <div className="flex flex-col items-start gap-0.5">
         <span className="font-extrabold text-xs sm:text-base text-black">
