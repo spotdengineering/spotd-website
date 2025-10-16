@@ -73,7 +73,11 @@ const NavBar = () => {
                   </div>
                   <div className="items-start gap-8 flex-col flex mt-10">
                     {navs?.map((n: any, index: number) => (
-                      <Link key={index} href={n?.link}>
+                      <Link
+                        key={index}
+                        href={n?.link}
+                        onClick={() => setIsOpen(!isOpen)}
+                      >
                         <p className="text-lg font-semibold hover:text-black/60 text-black transition-all duration-300">
                           {n?.name}
                         </p>
@@ -88,7 +92,7 @@ const NavBar = () => {
                       className="bg-gradient-to-l max-[365px]:px-6 "
                     />
                   </Link>
-                  <Link href="#">
+                  <Link href="#whyus" onClick={() => setIsOpen(!isOpen)}>
                     <CustomButtonOutline
                       name="Find out more"
                       className="max-[365px]:px-6"

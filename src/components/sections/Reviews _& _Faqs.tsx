@@ -34,18 +34,18 @@ const ReviewsAndFaqs = () => {
       note: 'The project was completed on time, approved without hassle, and payment released right away. The whole process felt smooth, efficient, and reliable, I’m really impressed.',
       img: '/landing-page-images/caro 1.jpg',
     },
-    // {
-    //   name: 'Jane Doe',
-    //   role: 'Designer',
-    //   note: '“The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent. I really love the work here”',
-    //   img: '/landing-page-images/caro 3.jpg',
-    // },
-    // {
-    //   name: 'John Doe',
-    //   role: 'Producer',
-    //   note: '“The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent. I really love the work here”',
-    //   img: '/landing-page-images/caro 2.jpg',
-    // },
+    {
+      name: 'Jane Doe',
+      role: 'Designer',
+      note: '“The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent. I really love the work here”',
+      img: '/landing-page-images/caro 3.jpg',
+    },
+    {
+      name: 'John Doe',
+      role: 'Producer',
+      note: '“The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent. I really love the work here”',
+      img: '/landing-page-images/caro 2.jpg',
+    },
   ];
 
   const join = [
