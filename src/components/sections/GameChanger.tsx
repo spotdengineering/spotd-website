@@ -38,8 +38,8 @@ const Game_Changer = () => {
             <Game_Image src="/img1.png" imgStyle="object-cover">
               <Mini_Card className="absolute top-[20px] -right-[5%] lg:right-[-10%] 2xl:right-[-30%]" />
               <Person_Card
-                img="/mini_guy.png"
-                text="Fashion Influence"
+                img="/landing-page-images/caro 1.jpg"
+                text="Fashion Influencer"
                 head="Olumide Egbe"
                 star
                 className="absolute whitespace-nowrap -left-3 sm:-left-5 bottom-[20] !pr-4 sm:pr-8"
@@ -102,7 +102,7 @@ const Game_Changer = () => {
           <Game_Image src="/img2.png" imgStyle="object-cover">
             <Chat_Card />
             <Person_Card
-              img="/mini_guy.png"
+              img="/landing-page-images/caro 1.jpg"
               text="Fashion Influence"
               head="Olumide Egbe"
               star

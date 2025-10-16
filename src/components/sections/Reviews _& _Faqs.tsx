@@ -29,23 +29,23 @@ const ReviewsAndFaqs = () => {
 
   const testimonies = [
     {
-      name: 'John Doe',
-      role: 'Artiste',
-      note: '“The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent. I really love the work here”',
+      name: 'Olumide Egbe',
+      role: 'Fashion Influencer',
+      note: 'The project was completed on time, approved without hassle, and payment released right away. The whole process felt smooth, efficient, and reliable, I’m really impressed.',
       img: '/landing-page-images/caro 1.jpg',
     },
-    {
-      name: 'Jane Doe',
-      role: 'Designer',
-      note: '“The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent. I really love the work here”',
-      img: '/landing-page-images/caro 3.jpg',
-    },
-    {
-      name: 'John Doe',
-      role: 'Producer',
-      note: '“The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent. I really love the work here”',
-      img: '/landing-page-images/caro 2.jpg',
-    },
+    // {
+    //   name: 'Jane Doe',
+    //   role: 'Designer',
+    //   note: '“The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent. I really love the work here”',
+    //   img: '/landing-page-images/caro 3.jpg',
+    // },
+    // {
+    //   name: 'John Doe',
+    //   role: 'Producer',
+    //   note: '“The work is delivered, quickly approved, and payment released,making the process fast, seamless, and transparent. I really love the work here”',
+    //   img: '/landing-page-images/caro 2.jpg',
+    // },
   ];
 
   const join = [
@@ -60,15 +60,15 @@ const ReviewsAndFaqs = () => {
     },
     {
       q: 'Who can join Spot’d?',
-      a: 'Spot’d is a platform for brands to connect with creatives.',
+      a: 'Spot’d is open to both brands looking to collaborate with fresh creative voices, and influencers or creatives who want to connect with the right opportunities.',
     },
     {
       q: 'I’m new. How do I get started?',
-      a: 'Spot’d is a platform for brands to connect with creatives.',
+      a: 'Just sign up, create your profile, and explore matches. Connect, collaborate, and get paid, all in one place.',
     },
     {
       q: 'How are collaborations managed?',
-      a: 'Spot’d is a platform for brands to connect with creatives.',
+      a: 'All collaborations are managed directly through Spot’d. From matching and messaging to approvals, delivery, and payment, everything happens in one seamless, transparent workflow.',
     },
   ];
 
@@ -289,7 +289,7 @@ const ReviewsAndFaqs = () => {
                   key={index}
                   className="cursor-pointer bg-[#ececec] rounded-3xl py-2 px-4 border-b-0 mb-4"
                 >
-                  <AccordionTrigger className="text-md text-black/80 font-semibold cursor-pointer hover:no-underline">
+                  <AccordionTrigger className="text-md text-black/50 font-semibold cursor-pointer hover:no-underline">
                     {f?.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-balance">
