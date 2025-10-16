@@ -63,7 +63,7 @@ export const Hero = () => {
                   className="bg-gradient-to-r "
                 />
               </Link>
-              <Link href="#">
+              <Link href="#whyus">
                 <CustomButtonOutline
                   name="Find out more"
                   className="max-[365px]:px-5"

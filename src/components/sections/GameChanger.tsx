@@ -103,7 +103,7 @@ const Game_Changer = () => {
             <Chat_Card />
             <Person_Card
               img="/landing-page-images/caro 1.jpg"
-              text="Fashion Influence"
+              text="Fashion Influencer"
               head="Olumide Egbe"
               star
               className="absolute whitespace-nowrap sm:bottom-10  bottom-5 !pr-4 sm:pr-8 -left-5"
