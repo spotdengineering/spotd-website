@@ -47,14 +47,14 @@ const About_Spotd = () => {
                   viewport={{ once: true, amount: 0.5 }}
                 >
                   <p className="font-medium text-black text-2xl sm:text-3xl max-w-5xl mb-10 lg:mb-12 text-start ">
-                    Finding the right influencer or creative shouldn’t feel like
-                    guesswork. Brands struggle to discover authentic
-                    influencers.
+                    Nigeria’s creative economy generates over $7.5 billion in
+                    revenue (2024), yet it operates without a single unifying
+                    infrastructure.
                     <br className="lg:hidden" />
                     <span className="text-black/60">
-                      Creatives lack visibility to the right opportunities.
-                      Influencers often get mismatched with campaigns that don’t
-                      fit their voice.
+                      With over 4.2 million creatives in the market and more
+                      than 75% struggling with visibility, opportunities are
+                      lost, and potential remains untapped.
                     </span>
                   </p>
                 </motion.div>
