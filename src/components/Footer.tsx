@@ -31,7 +31,7 @@ const Footer = () => {
     { icon: <FaTiktok />, link: 'https://tiktok.com/@spotd_cbi' },
     {
       icon: <FaYoutube />,
-      link: 'https://www.youtube.com/channel/UCbzD6DzlAbFhg56TXw8mixA',
+      link: 'https://www.youtube.com/@spotdcbi',
     },
   ];
 
